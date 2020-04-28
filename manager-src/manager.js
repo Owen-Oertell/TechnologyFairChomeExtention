@@ -19,7 +19,6 @@ window.onload = function () {
         }
         document.getElementById("managementTable").innerHTML = TotalString;
     });
-
 };
 
 $(document).ready(function () {
@@ -46,6 +45,8 @@ $(document).ready(function () {
                         chrome.storage.sync.set(dataObj, function () { });
                         }
                         location.reload();
+
+
                     })
                 }
             };
