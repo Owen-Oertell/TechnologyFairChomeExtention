@@ -1,6 +1,10 @@
+// This file comsists of a listener for a message that is sent from content.js mentioning if the user has previously said that they like or do not like this.
+
 chrome.runtime.onMessage.addListener(
   function (request, sender, sendResponse) {
+    // See if this website was marked good or bad
     if (request.greeting == "good") {
+      // Send the chrome notificaion that this recipie was good.
       var goodNotif = {
         type: "basic",
         title: "Good Recipe",
@@ -9,6 +13,7 @@ chrome.runtime.onMessage.addListener(
       }
       chrome.notifications.create(goodNotif);
     } else {
+      // Send the chrome notification that this recipie was bad.
       var badNotif = {
         type: "basic",
         title: "Bad Recipe",
@@ -17,6 +22,6 @@ chrome.runtime.onMessage.addListener(
       }
       chrome.notifications.create(badNotif);
     }
-
+    // Returvn true saying that no errors have occured.
     return true;
   });
