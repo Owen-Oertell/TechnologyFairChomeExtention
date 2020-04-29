@@ -57,4 +57,32 @@ table {
     transform: translateY(-2px);
 
 }
-  
+.save:hover{
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.save:active{
+  background-color:green;
+  box-shadow: 0 3px #666666;
+  transform: translateY(-2px);
+
+}
+
+.save {
+  display:inline-block;
+  background-color: white;
+  color: black;
+  background: transparent;
+  border: 2px solid green;
+  border-radius: 6px;
+  transition-duration: 0.4s;
+  padding-left: 6px;
+  padding-top: 8px;
+  padding-right: 6px;
+  padding-bottom: 8px;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+}

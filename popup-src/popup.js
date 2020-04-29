@@ -24,14 +24,15 @@ window.onload = function(){
                 }
             
 
+                //#!@ escape seqence
                 if (res != undefined && res != "") {
                     var dataObj = {};
-                    dataObj["master"] = (res + "&&{'" + url + "','bad','" + title + "'}");
+                    dataObj["master"] = (res + "&&{'" + url + "','bad','" + title + "',#!@#!@}");
                     chrome.storage.sync.set(dataObj, function(){});
                 }
                 else {
                     var dataObj = {};
-                    dataObj["master"] = ("{'" + url + "','bad','" + title + "'}");
+                    dataObj["master"] = ("{'" + url + "','bad','" + title + "',#!@#!@}");
                     chrome.storage.sync.set(dataObj, function(){});
                 }
             });
@@ -65,12 +66,12 @@ window.onload = function(){
 
                 if (res != undefined && res != "") {
                     var dataObj = {};
-                    dataObj["master"] = (res + "&&{'" + url + "','good','" + title + "'}");
+                    dataObj["master"] = (res + "&&{'" + url + "','good','" + title + "',#!@#!@}");
                     chrome.storage.sync.set(dataObj, function(){});
                 }
                 else {
                     var dataObj = {};
-                    dataObj["master"] = ("{'" + url + "','good','" + title + "'}");
+                    dataObj["master"] = ("{'" + url + "','good','" + title + "',#!@#!@}");
                     chrome.storage.sync.set(dataObj, function(){});
                 }
             });
