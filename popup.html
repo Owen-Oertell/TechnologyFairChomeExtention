@@ -1,6 +1,8 @@
+<!-- This is the HTML that is the set up for the entire popup window for saving the recipes.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Below are all the sources used to style the HTML popup.-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,14 +12,18 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- The body of the popup is created here.-->
     <div class="realBody">
         <div>
+            <!-- Recipe title shown here.-->
             <h1>How is this recipe?</h1>
             <div class="buttonDiv">
                 <div class="popup">
+                    <!-- Based on the specific button press, a different "selected" text appears-->
                     <span class="popuptext good" id="goodPopup">Good Recipe Selected</span>
                     <span class="popuptext bad" id ="badPopup">Bad Recipe Selected</span>
                   </div>
+                  <!-- These are the buttons used to save the recipe and go to the "Manage Recipes" table-->
                 <button id="goodRecipie" class="buttn">Good</button>
                 <button id="badRecipie" class="buttn">Bad</button>
                 <button id="manager" class="buttn buttonDiv">Manage Recipes</button>
