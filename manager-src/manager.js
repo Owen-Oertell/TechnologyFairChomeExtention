@@ -1,17 +1,19 @@
+// On the load of the webpage, the the 'master' cookie.
 window.onload = function () {
     chrome.storage.sync.get(["master"], function (result) {
         var res = result["master"];
+        // Declare return string. The first row is the beginning portion that talks
         var TotalString = "<tr><th>Recipe Title</th><th>Liked Recipe?</th><th>URL</th><th>Delete?</th><th>Comment</th><th>Save?</th></tr>";
         if (res != undefined) {
             var resArry = res.split("&&");
-            // Array split into parts
+            // Array split into parts. THe && sign sets apart the objects from one another in the master string.
             var inte=0;
             resArry.forEach(element => {
                 inte++;
                 var el = element.substring(1, element.length - 1)
                 el = el.split(",")
                 if (el[1].includes("good")) {
-                    el[1] = "You though this recipe was good"
+                    el[1] = "You thought this recipe was good"
                 }
                 else {
                     el[1] = "You thought this recipe was bad"
@@ -27,7 +29,7 @@ $(document).ready(function () {
     $(function () {
         $('div').click(function (e) {
             console.log(e.target.id)
-            if (e.target.id != undefined && e.target.id != "" && !e.target.id.includes("itwillbedone")) {
+            if (e.target != undefined && e.target.id != undefined && e.target.id != "" && !e.target.id.includes("itwillbedone")) {
                 if ($(this).attr('id').includes("http://") || $(this).attr('id').includes("https://")) {
                     if ($(this).hasClass("save")) {
                         var URL = $(this).attr('id');
