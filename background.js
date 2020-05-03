@@ -26,6 +26,7 @@ chrome.runtime.onMessage.addListener(
         type: "basic",
         title: "Undecided Recipe",
         message: "You previously saved this recipe but made no judgement",
+        iconUrl: "questionMark.png"
       }
       chrome.notifications.create(undecidedNotif);
     }
