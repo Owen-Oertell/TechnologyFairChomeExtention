@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(
         iconUrl: "check.png"
       }
       chrome.notifications.create(goodNotif);
-    } else {
+    } else if(request.greeting == "bad"){
       // Send the chrome notification that this recipie was bad.
       var badNotif = {
         type: "basic",
@@ -21,6 +21,13 @@ chrome.runtime.onMessage.addListener(
         iconUrl: "x.png"
       }
       chrome.notifications.create(badNotif);
+    }else{
+      var undecidedNotif = {
+        type: "basic",
+        title: "Undecided Recipe",
+        message: "You previously saved this recipe but made no judgement",
+      }
+      chrome.notifications.create(undecidedNotif);
     }
     // Returvn true saying that no errors have occured.
     return true;

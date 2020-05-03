@@ -25,6 +25,8 @@ window.onload = function() {
                     else if(element.includes("bad")) {
                         // element bad
                         chrome.extension.sendMessage({greeting: "bad"}, function(response) {});
+                    }else{
+                        chrome.extension.sendMessage({greeting: "undecided"}, function(response) {});
                     }
                 }
             });
