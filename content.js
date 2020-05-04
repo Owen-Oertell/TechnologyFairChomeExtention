@@ -22,7 +22,7 @@ window.onload = function() {
                         // element good
                         chrome.extension.sendMessage({greeting: "good"}, function(response) {});
                     }
-                    else {
+                    else if(element.includes("bad")) {
                         // element bad
                         chrome.extension.sendMessage({greeting: "bad"}, function(response) {});
                     }
