@@ -26,13 +26,13 @@ window.onload = function () {
                     el[1] = "You have not decided yet!"
                 }
                 // Add this entry to the table. It contains:
-                // - Name of the Recipie
-                // - If you liked this recipie
+                // - Name of the Recipe
+                // - If you liked this recipe
                 // - URL of the reicipe
-                // - A delete button {Has the id of the url of the recipie}
+                // - A delete button {Has the id of the url of the recipe}
                 // - A comment section {Has the id of the index of the object and the text "itwillbedone"}
                 // - A save button {Has the id url}
-                TotalString += ("<tr><td>" + el[2].substring(1, el[2].length - 1) + "</td><td>" + el[1] + "</td><td><a target='_blank' href = '" + el[0].substring(1, el[0].length - 1) + "'>Go To Recipie!</a></td><td><div class='remove' id=\"" + el[0] + "\">X</div></td><td><textarea id=\"" + inte + "itwillbedone\" rows='4' cols='50'>" + el[3].substring(3, el[3].length - 3) + "</textarea></td> <td><div class='save' id=\"" + el[0] + "\">Save!</div></td></tr>")
+                TotalString += ("<tr><td>" + el[2].substring(1, el[2].length - 1) + "</td><td>" + el[1] + "</td><td><a target='_blank' href = '" + el[0].substring(1, el[0].length - 1) + "'>Go To Recipe!</a></td><td><div class='remove' id=\"" + el[0] + "\">X</div></td><td><textarea id=\"" + inte + "itwillbedone\" rows='4' cols='50'>" + el[3].substring(3, el[3].length - 3) + "</textarea></td> <td><div class='save' id=\"" + el[0] + "\">Save!</div></td></tr>")
             });
         }
         // Set the table as this value. Dynamically.
