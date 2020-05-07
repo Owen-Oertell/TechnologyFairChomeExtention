@@ -1,7 +1,7 @@
 {
   "name": "Recipe Manager",
   "manifest_version": 2,
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Helps you manage your recipes, so you don't ever make the same bad thing twice!",
   "icons": { "16": "spoon16.png",
     "48": "spoon48.png",
